@@ -10,7 +10,9 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="MG Jeneratör" className="h-12 w-auto" />
+              <div className="bg-[#f5ede0] p-2 rounded-xl">
+                <img src="/logo.png" alt="MG Jeneratör" className="h-12 w-auto" />
+              </div>
               <div>
                 <span className="font-heading font-bold text-xl">MG Jeneratör</span>
                 <p className="text-xs text-primary-foreground/70">Hizmetleri</p>
