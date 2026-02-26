@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Youtube, Smartphone } from "lucide-react";
+import { Phone, Mail, MapPin, Smartphone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -11,7 +11,7 @@ export function Footer() {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <div className="bg-[#f5ede0] p-2 rounded-xl">
-                <img src="/logo.png" alt="MG Jeneratör" className="h-12 w-auto" />
+                <img src="/logo.png" alt="MG Jeneratör Hizmetleri" width={150} height={48} className="h-12 w-auto" />
               </div>
               <div>
                 <span className="font-heading font-bold text-xl">MG Jeneratör</span>
@@ -22,21 +22,7 @@ export function Footer() {
               20 yılı aşkın tecrübemizle jeneratör bakım, onarım ve revizyon hizmetlerinde 
               Türkiye'nin güvenilir çözüm ortağıyız.
             </p>
-            {/* Social Media */}
-            <div className="flex items-center gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
+            {/* Social media links removed until real URLs are available */}
           </div>
 
           {/* Quick Links */}

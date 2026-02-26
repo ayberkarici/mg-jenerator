@@ -76,10 +76,30 @@ ${formData.message}`;
     <Layout>
       <Helmet>
         <title>İletişim | MG Jeneratör Hizmetleri - Bize Ulaşın</title>
-        <meta 
-          name="description" 
-          content="MG Jeneratör Hizmetleri ile iletişime geçin. 7/24 acil servis, teklif talebi ve sorularınız için bize ulaşın." 
+        <meta
+          name="description"
+          content="MG Jeneratör Hizmetleri ile iletişime geçin. 7/24 acil servis, teklif talebi ve sorularınız için bize ulaşın."
         />
+        <link rel="canonical" href="https://mgjenerator.com/iletisim" />
+        <meta property="og:title" content="İletişim | MG Jeneratör Hizmetleri" />
+        <meta property="og:description" content="7/24 acil servis, teklif talebi ve sorularınız için bize ulaşın." />
+        <meta property="og:url" content="https://mgjenerator.com/iletisim" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://mgjenerator.com/og-image.jpg" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="İletişim | MG Jeneratör Hizmetleri" />
+        <meta name="twitter:description" content="7/24 acil servis, teklif talebi ve sorularınız için bize ulaşın." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Anasayfa", item: "https://mgjenerator.com/" },
+              { "@type": "ListItem", position: 2, name: "İletişim", item: "https://mgjenerator.com/iletisim" },
+            ],
+          })}
+        </script>
       </Helmet>
 
       {/* Hero */}

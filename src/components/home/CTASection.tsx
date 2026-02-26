@@ -29,10 +29,10 @@ export function CTASection() {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <a href="tel:+902121234567">
+            <a href="tel:+905326963488">
               <Button variant="hero" className="text-lg px-8 py-6">
                 <Phone className="mr-2 w-5 h-5" />
-                0212 123 45 67
+                0 (532) 696 34 88
               </Button>
             </a>
           </div>

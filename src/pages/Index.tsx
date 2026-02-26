@@ -7,16 +7,69 @@ import { CTASection } from "@/components/home/CTASection";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Smartphone } from "lucide-react";
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://mgjenerator.com/#organization",
+  name: "MG Jeneratör Hizmetleri",
+  description: "20 yıllık tecrübe ile jeneratör bakım, onarım, revizyon ve 7/24 acil servis hizmetleri.",
+  url: "https://mgjenerator.com",
+  telephone: "+902166801997",
+  email: "info@mgjenerator.com",
+  image: "https://mgjenerator.com/og-image.jpg",
+  logo: "https://mgjenerator.com/logo.png",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Acarlar Mah. Candan Çıkmazı No:9 Umut Vadisi Sitesi A5 Blok D.20",
+    addressLocality: "Beykoz",
+    addressRegion: "İstanbul",
+    postalCode: "34805",
+    addressCountry: "TR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 41.1095361,
+    longitude: 29.1154416,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
+  areaServed: {
+    "@type": "Country",
+    name: "Turkey",
+  },
+  sameAs: [],
+};
+
 const Index = () => {
   return (
     <Layout>
       <Helmet>
         <title>MG Jeneratör Hizmetleri | Kesintisiz Enerji Çözümleri</title>
-        <meta 
-          name="description" 
-          content="MG Jeneratör Hizmetleri - 20 yıllık tecrübe ile jeneratör bakım, onarım, revizyon ve 7/24 acil servis hizmetleri. Türkiye genelinde profesyonel jeneratör servisi." 
+        <meta
+          name="description"
+          content="MG Jeneratör Hizmetleri - 20 yıllık tecrübe ile jeneratör bakım, onarım, revizyon ve 7/24 acil servis hizmetleri. Türkiye genelinde profesyonel jeneratör servisi."
         />
-        <meta name="keywords" content="jeneratör bakım, jeneratör onarım, jeneratör servis, kesintisiz enerji, güç çözümleri, periyodik bakım, MG Jeneratör Hizmetleri" />
+        <link rel="canonical" href="https://mgjenerator.com/" />
+        <meta property="og:title" content="MG Jeneratör Hizmetleri | Kesintisiz Enerji Çözümleri" />
+        <meta property="og:description" content="20 yıllık tecrübe ile jeneratör bakım, onarım, revizyon ve 7/24 acil servis hizmetleri." />
+        <meta property="og:url" content="https://mgjenerator.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://mgjenerator.com/og-image.jpg" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="MG Jeneratör Hizmetleri | Kesintisiz Enerji Çözümleri" />
+        <meta name="twitter:description" content="20 yıllık tecrübe ile jeneratör bakım, onarım, revizyon ve 7/24 acil servis hizmetleri." />
+        <meta name="twitter:image" content="https://mgjenerator.com/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
       </Helmet>
       
       <HeroSection />

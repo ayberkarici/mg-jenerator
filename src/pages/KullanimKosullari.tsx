@@ -6,10 +6,16 @@ export default function KullanimKosullari() {
     <Layout>
       <Helmet>
         <title>Kullanım Koşulları | MG Jeneratör Hizmetleri</title>
-        <meta 
-          name="description" 
-          content="MG Jeneratör Hizmetleri web sitesi kullanım koşulları. Siteyi kullanarak bu koşulları kabul etmiş sayılırsınız." 
+        <meta
+          name="description"
+          content="MG Jeneratör Hizmetleri web sitesi kullanım koşulları. Siteyi kullanarak bu koşulları kabul etmiş sayılırsınız."
         />
+        <link rel="canonical" href="https://mgjenerator.com/kullanim-kosullari" />
+        <meta name="robots" content="noindex, follow" />
+        <meta property="og:title" content="Kullanım Koşulları | MG Jeneratör Hizmetleri" />
+        <meta property="og:url" content="https://mgjenerator.com/kullanim-kosullari" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="tr_TR" />
       </Helmet>
 
       {/* Hero */}

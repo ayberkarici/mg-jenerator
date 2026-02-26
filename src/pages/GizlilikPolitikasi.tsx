@@ -6,10 +6,16 @@ export default function GizlilikPolitikasi() {
     <Layout>
       <Helmet>
         <title>Gizlilik Politikası | MG Jeneratör Hizmetleri</title>
-        <meta 
-          name="description" 
-          content="MG Jeneratör Hizmetleri gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında bilgi edinin." 
+        <meta
+          name="description"
+          content="MG Jeneratör Hizmetleri gizlilik politikası. Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında bilgi edinin."
         />
+        <link rel="canonical" href="https://mgjenerator.com/gizlilik" />
+        <meta name="robots" content="noindex, follow" />
+        <meta property="og:title" content="Gizlilik Politikası | MG Jeneratör Hizmetleri" />
+        <meta property="og:url" content="https://mgjenerator.com/gizlilik" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="tr_TR" />
       </Helmet>
 
       {/* Hero */}

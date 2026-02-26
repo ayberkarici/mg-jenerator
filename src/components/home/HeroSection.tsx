@@ -68,8 +68,10 @@ export function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-4 bg-accent/20 rounded-3xl blur-3xl" />
               <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Profesyonel jeneratör bakım hizmeti"
+                src="/images/hero-generator.webp"
+                alt="MG Jeneratör profesyonel jeneratör bakım ve onarım hizmeti"
+                width={800}
+                height={600}
                 className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
               />
               {/* Floating Card */}

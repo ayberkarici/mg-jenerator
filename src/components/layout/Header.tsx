@@ -31,7 +31,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/logo.png" alt="MG Jeneratör Hizmetleri" className="h-12 w-auto" />
+            <img src="/logo.png" alt="MG Jeneratör Hizmetleri" width={150} height={48} className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

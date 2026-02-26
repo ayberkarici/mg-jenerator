@@ -19,7 +19,7 @@ const services = [
       "Akü bakımı ve test",
       "Genel performans testi",
     ],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/periyodik-bakim.webp",
   },
   {
     id: "ariza-onarim",
@@ -35,7 +35,7 @@ const services = [
       "Arıza teşhis ve analiz raporu",
       "Garanti kapsamında onarım",
     ],
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/ariza-onarim.webp",
   },
   {
     id: "revizyon",
@@ -51,7 +51,7 @@ const services = [
       "Elektrik sistemi yenileme",
       "Fabrika test standartlarında kontrol",
     ],
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/revizyon.webp",
   },
   {
     id: "yerinde-servis",
@@ -67,7 +67,7 @@ const services = [
       "Minimum iş kesintisi",
       "Türkiye geneli hizmet",
     ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/yerinde-servis.webp",
   },
   {
     id: "7-24-destek",
@@ -83,7 +83,7 @@ const services = [
       "Teknik danışmanlık",
       "Operasyon takibi",
     ],
-    image: "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/7-24-destek.webp",
   },
   {
     id: "danismanlik",
@@ -99,19 +99,62 @@ const services = [
       "Teknik şartname hazırlama",
       "Kurulum danışmanlığı",
     ],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/images/services/danismanlik.webp",
   },
 ];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.title,
+      description: service.fullDesc,
+      provider: {
+        "@type": "LocalBusiness",
+        name: "MG Jeneratör Hizmetleri",
+      },
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Anasayfa", item: "https://mgjenerator.com/" },
+    { "@type": "ListItem", position: 2, name: "Hizmetlerimiz", item: "https://mgjenerator.com/hizmetler" },
+  ],
+};
 
 export default function Hizmetler() {
   return (
     <Layout>
       <Helmet>
         <title>Hizmetlerimiz | MG Jeneratör Hizmetleri - Profesyonel Jeneratör Servisi</title>
-        <meta 
-          name="description" 
-          content="MG Jeneratör Hizmetleri - Periyodik bakım, arıza onarım, revizyon, yerinde servis ve 7/24 destek hizmetlerimizle kesintisiz enerji çözümleri sunuyoruz." 
+        <meta
+          name="description"
+          content="MG Jeneratör Hizmetleri - Periyodik bakım, arıza onarım, revizyon, yerinde servis ve 7/24 destek hizmetlerimizle kesintisiz enerji çözümleri sunuyoruz."
         />
+        <link rel="canonical" href="https://mgjenerator.com/hizmetler" />
+        <meta property="og:title" content="Hizmetlerimiz | MG Jeneratör Hizmetleri" />
+        <meta property="og:description" content="Periyodik bakım, arıza onarım, revizyon, yerinde servis ve 7/24 destek hizmetleri." />
+        <meta property="og:url" content="https://mgjenerator.com/hizmetler" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://mgjenerator.com/og-image.jpg" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hizmetlerimiz | MG Jeneratör Hizmetleri" />
+        <meta name="twitter:description" content="Periyodik bakım, arıza onarım, revizyon, yerinde servis ve 7/24 destek hizmetleri." />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
       {/* Hero */}
@@ -177,7 +220,9 @@ export default function Hizmetler() {
                     <div className="absolute -inset-4 bg-accent/10 rounded-3xl blur-2xl" />
                     <img
                       src={service.image}
-                      alt={service.title}
+                      alt={`MG Jeneratör ${service.title} hizmeti`}
+                      width={600}
+                      height={450}
                       className="relative rounded-2xl shadow-elegant w-full object-cover aspect-[4/3]"
                     />
                   </div>

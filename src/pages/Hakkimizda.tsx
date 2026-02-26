@@ -42,15 +42,37 @@ const team = [
   { name: "Can Demir", role: "Satış Direktörü", experience: "18+ Yıl Tecrübe" },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Anasayfa", item: "https://mgjenerator.com/" },
+    { "@type": "ListItem", position: 2, name: "Hakkımızda", item: "https://mgjenerator.com/hakkimizda" },
+  ],
+};
+
 export default function Hakkimizda() {
   return (
     <Layout>
       <Helmet>
         <title>Hakkımızda | MG Jeneratör Hizmetleri - 20 Yıllık Tecrübe</title>
-        <meta 
-          name="description" 
-          content="MG Jeneratör Hizmetleri olarak 20 yılı aşkın tecrübemizle Türkiye'nin güvenilir jeneratör servis şirketiyiz. Misyon, vizyon ve değerlerimizi keşfedin." 
+        <meta
+          name="description"
+          content="MG Jeneratör Hizmetleri olarak 20 yılı aşkın tecrübemizle Türkiye'nin güvenilir jeneratör servis şirketiyiz. Misyon, vizyon ve değerlerimizi keşfedin."
         />
+        <link rel="canonical" href="https://mgjenerator.com/hakkimizda" />
+        <meta property="og:title" content="Hakkımızda | MG Jeneratör Hizmetleri" />
+        <meta property="og:description" content="20 yılı aşkın tecrübemizle Türkiye'nin güvenilir jeneratör servis şirketi." />
+        <meta property="og:url" content="https://mgjenerator.com/hakkimizda" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://mgjenerator.com/og-image.jpg" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hakkımızda | MG Jeneratör Hizmetleri" />
+        <meta name="twitter:description" content="20 yılı aşkın tecrübemizle Türkiye'nin güvenilir jeneratör servis şirketi." />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
       {/* Hero */}
@@ -75,8 +97,10 @@ export default function Hakkimizda() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-accent/20 rounded-3xl blur-3xl" />
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="MG Jeneratör Ekibi"
+                  src="/images/about-team.webp"
+                  alt="MG Jeneratör Hizmetleri uzman teknik ekibi"
+                  width={600}
+                  height={450}
                   className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
                 />
               </div>

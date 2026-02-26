@@ -78,13 +78,17 @@ export function WhyUsSection() {
             <div className="absolute -inset-4 bg-accent/10 rounded-3xl blur-2xl" />
             <div className="relative grid grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Teknik ekip çalışması"
+                src="/images/why-us-1.webp"
+                alt="MG Jeneratör teknik ekibi jeneratör bakım çalışması yapıyor"
+                width={400}
+                height={533}
                 className="rounded-2xl shadow-elegant w-full object-cover aspect-[3/4]"
               />
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Profesyonel servis"
+                src="/images/why-us-2.webp"
+                alt="MG Jeneratör profesyonel yerinde servis hizmeti"
+                width={400}
+                height={533}
                 className="rounded-2xl shadow-elegant w-full object-cover aspect-[3/4] mt-8"
               />
             </div>
